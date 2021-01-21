@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DadoComponent } from './components/dado/dado.component';
+import { SelectornumericoComponent } from './components/selectornumerico/selectornumerico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DadoComponent
+    SelectornumericoComponent,
   ],
   imports: [
     BrowserModule,
