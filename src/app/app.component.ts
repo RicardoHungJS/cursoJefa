@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SelectornumericoComponent } from './components/selectornumerico/selectornumerico.component';
 
 @Component({
   selector: 'app-root',
@@ -6,28 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  valor1: number;
-  valor2: number;
-  valor3: number;
-  resultado: string;
+  @ViewChild('selector1') selector1: SelectornumericoComponent;
+  @ViewChild('selector2') selector2: SelectornumericoComponent;  
 
-  constructor(){
-    this.valor1 = this.retornarAleatorio();
-    this.valor2 = this.retornarAleatorio();
-    this.valor3 = this.retornarAleatorio();
+  fijarSelector1(valor:number) {
+    this.selector1.fijar(valor);
   }
 
-  retornarAleatorio() {
-    return Math.trunc(Math.random() * 6) + 1;
+  fijarSelector2(valor:number) {
+    this.selector2.fijar(valor);
   }
 
-  tirar() {
-    this.valor1 = this.retornarAleatorio();
-    this.valor2 = this.retornarAleatorio();
-    this.valor3 = this.retornarAleatorio();
-    if (this.valor1==this.valor2 && this.valor1==this.valor3)    
-      this.resultado='Ganó';
-    else
-      this.resultado='Perdió';
-  }
 }
