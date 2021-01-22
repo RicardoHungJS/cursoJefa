@@ -4,9 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import { LetrasPipe } from './pipes/letras.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
+    LetrasPipe,
   ],
   imports: [
     BrowserModule,
