@@ -6,17 +6,23 @@ import { ColombiaComponent } from './colombia/colombia.component';
 
 const routes: Routes = [
   {
-    path: 'chile',
-    component: ChileComponent
-  },
-  {
-    path: 'argentina',
-    component: ArgentinaComponent
-  },
-  {
-    path: 'colombia',
-    component: ColombiaComponent
-  }  
+    path: '',
+    children: [
+      {
+        path: 'chile',
+        component: ChileComponent
+      },
+      {
+        path: 'argentina',
+        component: ArgentinaComponent
+      },
+      {
+        path: 'colombia',
+        component: ColombiaComponent
+      }
+    ]
+  }
+
 ];
 
 @NgModule({
