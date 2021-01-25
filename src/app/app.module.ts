@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { AmericaComponent } from './modules/america/america.component';
+import { EuropaComponent } from './modules/europa/europa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AmericaComponent,
+    EuropaComponent,
   ],
   imports: [
     BrowserModule,
